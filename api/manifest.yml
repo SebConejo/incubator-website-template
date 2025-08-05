@@ -6,6 +6,7 @@ entities:
   Program:
     properties:
       - name
+      - { name: image, type: image, helpText: 'Image for the program  ' }
       - { name: description, type: richText }
       - {
           name: testimonials,
@@ -18,7 +19,6 @@ entities:
           helpText: 'Call to Action for this program',
           type: group,
           options: { group: CallToAction, multiple: false },
-          validation: { isNotEmpty: true },
         }
     policies:
       read:
@@ -32,6 +32,7 @@ groups:
       - job
       - company
       - { name: content, type: text, validation: { isNotEmpty: true } }
+
   CallToAction:
     properties:
       - { name: title, type: string }
