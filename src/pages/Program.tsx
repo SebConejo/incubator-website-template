@@ -2,6 +2,7 @@ import { Award, Globe, TrendingUp, Users2 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import CTAWidget from '../components/CTAWidget'
+import Footer from '../components/Footer'
 import Testimonial from '../components/Testimonial'
 
 const features = [
@@ -235,6 +236,23 @@ const Program = () => {
         </div>
       </section>
 
+      {/* Testimonials Section (dynamic) */}
+      <section className="py-32 px-6 lg:px-8 bg-black">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-thin tracking-tight text-white mb-16 text-center">
+            Success Stories
+          </h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {program?.testimonials?.length > 0 ? (
+              program.testimonials.map((testimonial, index) => (
+                <Testimonial key={index} {...testimonial} />
+              ))
+            ) : (
+              <p className="text-gray-400">No testimonials yet.</p>
+            )}
+          </div>
+        </div>
+      </section>
       {/* Advisory Board (static) */}
       <section className="py-32 px-6 lg:px-8 bg-gray-900">
         <div className="max-w-7xl mx-auto">
@@ -281,39 +299,23 @@ const Program = () => {
           </div>
         </div>
       </section>
-
-      {/* Testimonials Section (dynamic) */}
-      <section className="py-32 px-6 lg:px-8 bg-black">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-thin tracking-tight text-white mb-16 text-center">
-            Success Stories
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {program?.testimonials?.length > 0 ? (
-              program.testimonials.map((testimonial, index) => (
-                <Testimonial key={index} {...testimonial} />
-              ))
-            ) : (
-              <p className="text-gray-400">No testimonials yet.</p>
-            )}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section (dynamic) */}
       {program?.callToAction && (
-        <section className="px-6 lg:px-8 mb-32">
-          <div className="max-w-7xl mx-auto">
-            <CTAWidget
-              title={program.callToAction.title}
-              description={program.callToAction.description}
-              buttonText={program.callToAction.buttonAnchor}
-              backgroundImage={program.callToAction.photo?.medium}
-              buttonLink={program.callToAction.buttonLink}
-            />
+        <section className="w-full flex justify-center items-center py-20 px-2 bg-gray-900">
+          <div className="w-full max-w-5xl">
+            <div className="rounded-3xl border-2 border-gray-800 shadow-2xl bg-black">
+              <CTAWidget
+                title={program.callToAction.title}
+                description={program.callToAction.description}
+                buttonText={program.callToAction.buttonAnchor}
+                backgroundImage={program.callToAction.photo?.medium}
+                buttonLink={program.callToAction.buttonLink}
+              />
+            </div>
           </div>
         </section>
       )}
+      <Footer />
     </div>
   )
 }

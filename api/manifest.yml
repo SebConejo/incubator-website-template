@@ -37,18 +37,5 @@ groups:
     properties:
       - { name: title, type: string }
       - { name: description, type: text }
-      - {
-          name: photo,
-          type: image,
-          options:
-            {
-              sizes:
-                {
-                  small: { height: 90, width: 90 },
-                  medium: { width: 800 },
-                  large: { width: 1600 },
-                },
-            },
-        }
       - { name: buttonAnchor, type: string, helpText: 'Anchor for the button' }
       - { name: buttonLink, type: link }

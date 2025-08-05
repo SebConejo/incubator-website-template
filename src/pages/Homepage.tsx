@@ -1,28 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Lightbulb, TrendingUp } from 'lucide-react';
+import { ArrowRight, Lightbulb, Target, TrendingUp } from 'lucide-react'
+import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const Homepage = () => {
   const programs = [
     {
       icon: <Target className="w-8 h-8" />,
       title: 'Startup Accelerator',
-      description: 'Transform your early-stage startup into a scalable business with our intensive 12-week program.',
-      path: '/startup-accelerator'
+      description:
+        'Transform your early-stage startup into a scalable business with our intensive 12-week program.',
+      path: '/startup-accelerator',
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
       title: 'Tech Incubator',
-      description: 'From concept to prototype. Build groundbreaking technology solutions with expert guidance.',
-      path: '/tech-incubator'
+      description:
+        'From concept to prototype. Build groundbreaking technology solutions with expert guidance.',
+      path: '/tech-incubator',
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: 'Scale-up Program',
-      description: 'Accelerate growth for established startups ready to expand into new markets and territories.',
-      path: '/scaleup-program'
-    }
-  ];
+      description:
+        'Accelerate growth for established startups ready to expand into new markets and territories.',
+      path: '/scaleup-program',
+    },
+  ]
 
   return (
     <div className="pt-20 bg-black min-h-screen">
@@ -38,31 +41,32 @@ const Homepage = () => {
                 Meets Reality
               </h1>
               <p className="text-xl text-gray-300 font-light leading-relaxed mb-12">
-                We partner with visionary founders to build companies that define tomorrow. 
-                Our three specialized programs provide the resources, mentorship, and network needed 
-                to transform breakthrough ideas into industry-leading enterprises.
+                We partner with visionary founders to build companies that
+                define tomorrow. Our three specialized programs provide the
+                resources, mentorship, and network needed to transform
+                breakthrough ideas into industry-leading enterprises.
               </p>
               <button className="bg-orange-400 text-black px-12 py-4 text-sm font-medium tracking-wide hover:bg-orange-300 transition-all duration-200 hover:scale-105 relative z-20">
                 EXPLORE PROGRAMS
               </button>
-              
+
               {/* Decorative Elements */}
               <div className="absolute -top-8 -left-8 w-24 h-24 border border-orange-400/20 rounded-full"></div>
               <div className="absolute top-32 -right-4 w-16 h-16 bg-orange-400/10 rounded-lg rotate-45"></div>
               <div className="absolute -bottom-12 left-24 w-8 h-8 bg-orange-400/20 rounded-full"></div>
             </div>
-            
+
             {/* Right Image */}
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl">
-                <img 
-                  src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" 
-                  alt="Entrepreneurs collaborating" 
+                <img
+                  src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
+                  alt="Entrepreneurs collaborating"
                   className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               </div>
-              
+
               {/* Floating Elements */}
               <div className="absolute -top-6 -right-6 w-32 h-32 bg-orange-400/10 rounded-full blur-xl"></div>
               <div className="absolute top-16 -left-8 w-4 h-4 bg-orange-400 rounded-full animate-pulse"></div>
@@ -81,14 +85,18 @@ const Homepage = () => {
               Three Pathways to Success
             </h2>
             <p className="text-lg text-gray-300 font-light max-w-3xl mx-auto">
-              Each program is meticulously crafted to meet entrepreneurs at their specific stage of growth, 
-              providing tailored resources, expert guidance, and strategic support for sustainable success.
+              Each program is meticulously crafted to meet entrepreneurs at
+              their specific stage of growth, providing tailored resources,
+              expert guidance, and strategic support for sustainable success.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-12">
             {programs.map((program, index) => (
-              <div key={index} className="bg-black border border-gray-800 p-12 group hover:border-gray-700 transition-all duration-300">
+              <div
+                key={index}
+                className="bg-black border border-gray-800 p-12 group hover:border-gray-700 transition-all duration-300"
+              >
                 <div className="text-white mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center mb-4">
                     <div className="text-black text-2xl font-bold">
@@ -123,39 +131,56 @@ const Homepage = () => {
               Leadership Team
             </h2>
             <p className="text-lg text-gray-300 font-light max-w-2xl mx-auto">
-              Experienced entrepreneurs and investors who have built and scaled successful companies.
+              Experienced entrepreneurs and investors who have built and scaled
+              successful companies.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             <div className="text-center">
-              <img 
-                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg" 
-                alt="CEO" 
+              <img
+                src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg"
+                alt="CEO"
                 className="w-32 h-32 rounded-full mx-auto mb-6 object-cover grayscale hover:grayscale-0 transition-all duration-300"
               />
-              <h3 className="text-xl font-medium text-white mb-2">Alexandra Chen</h3>
-              <p className="text-gray-400 font-light mb-4">CEO & Managing Partner</p>
-              <p className="text-sm text-gray-500">Former VP at Sequoia Capital, 3x successful exits</p>
+              <h3 className="text-xl font-medium text-white mb-2">
+                Alexandra Chen
+              </h3>
+              <p className="text-gray-400 font-light mb-4">
+                CEO & Managing Partner
+              </p>
+              <p className="text-sm text-gray-500">
+                Former VP at Sequoia Capital, 3x successful exits
+              </p>
             </div>
             <div className="text-center">
-              <img 
-                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg" 
-                alt="CTO" 
+              <img
+                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                alt="CTO"
                 className="w-32 h-32 rounded-full mx-auto mb-6 object-cover grayscale hover:grayscale-0 transition-all duration-300"
               />
-              <h3 className="text-xl font-medium text-white mb-2">Marcus Rodriguez</h3>
-              <p className="text-gray-400 font-light mb-4">CTO & Technical Partner</p>
-              <p className="text-sm text-gray-500">Ex-Google, founded 2 AI startups, MIT PhD</p>
+              <h3 className="text-xl font-medium text-white mb-2">
+                Marcus Rodriguez
+              </h3>
+              <p className="text-gray-400 font-light mb-4">
+                CTO & Technical Partner
+              </p>
+              <p className="text-sm text-gray-500">
+                Ex-Google, founded 2 AI startups, MIT PhD
+              </p>
             </div>
             <div className="text-center">
-              <img 
-                src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg" 
-                alt="Investment Director" 
+              <img
+                src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg"
+                alt="Investment Director"
                 className="w-32 h-32 rounded-full mx-auto mb-6 object-cover grayscale hover:grayscale-0 transition-all duration-300"
               />
               <h3 className="text-xl font-medium text-white mb-2">Sarah Kim</h3>
-              <p className="text-gray-400 font-light mb-4">Investment Director</p>
-              <p className="text-sm text-gray-500">Former Goldman Sachs, Harvard MBA, 15+ years VC</p>
+              <p className="text-gray-400 font-light mb-4">
+                Investment Director
+              </p>
+              <p className="text-sm text-gray-500">
+                Former Goldman Sachs, Harvard MBA, 15+ years VC
+              </p>
             </div>
           </div>
         </div>
@@ -169,25 +194,34 @@ const Homepage = () => {
               Impact & Results
             </h2>
             <p className="text-lg text-gray-300 font-light max-w-2xl mx-auto">
-              Our track record speaks to the quality of our programs and the success of our portfolio companies.
+              Our track record speaks to the quality of our programs and the
+              success of our portfolio companies.
             </p>
           </div>
           <div className="grid md:grid-cols-4 gap-16 text-center">
             <div>
               <div className="text-5xl font-thin text-white mb-4">200+</div>
-              <div className="text-sm font-medium tracking-wide text-gray-400">COMPANIES LAUNCHED</div>
+              <div className="text-sm font-medium tracking-wide text-gray-400">
+                COMPANIES LAUNCHED
+              </div>
             </div>
             <div>
               <div className="text-5xl font-thin text-white mb-4">$2.5B+</div>
-              <div className="text-sm font-medium tracking-wide text-gray-400">CAPITAL RAISED</div>
+              <div className="text-sm font-medium tracking-wide text-gray-400">
+                CAPITAL RAISED
+              </div>
             </div>
             <div>
               <div className="text-5xl font-thin text-white mb-4">95%</div>
-              <div className="text-sm font-medium tracking-wide text-gray-400">SUCCESS RATE</div>
+              <div className="text-sm font-medium tracking-wide text-gray-400">
+                SUCCESS RATE
+              </div>
             </div>
             <div>
               <div className="text-5xl font-thin text-white mb-4">150+</div>
-              <div className="text-sm font-medium tracking-wide text-gray-400">INDUSTRY EXPERTS</div>
+              <div className="text-sm font-medium tracking-wide text-gray-400">
+                INDUSTRY EXPERTS
+              </div>
             </div>
           </div>
         </div>
@@ -200,110 +234,46 @@ const Homepage = () => {
             Our Philosophy
           </h2>
           <p className="text-xl text-gray-300 font-light leading-relaxed mb-12">
-            We believe in the power of focused execution, strategic thinking, and relentless innovation. 
-            Our approach combines deep technical expertise with proven business methodologies, 
-            creating an environment where exceptional ideas can flourish and scale.
+            We believe in the power of focused execution, strategic thinking,
+            and relentless innovation. Our approach combines deep technical
+            expertise with proven business methodologies, creating an
+            environment where exceptional ideas can flourish and scale.
           </p>
           <div className="grid md:grid-cols-3 gap-12 mt-16">
             <div className="text-center">
-              <h3 className="text-lg font-medium text-white mb-4">Quality over Quantity</h3>
-              <p className="text-gray-400 font-light text-sm">We work with fewer companies to provide deeper, more meaningful support</p>
+              <h3 className="text-lg font-medium text-white mb-4">
+                Quality over Quantity
+              </h3>
+              <p className="text-gray-400 font-light text-sm">
+                We work with fewer companies to provide deeper, more meaningful
+                support
+              </p>
             </div>
             <div className="text-center">
-              <h3 className="text-lg font-medium text-white mb-4">Long-term Partnership</h3>
-              <p className="text-gray-400 font-light text-sm">Our relationship extends far beyond program completion</p>
+              <h3 className="text-lg font-medium text-white mb-4">
+                Long-term Partnership
+              </h3>
+              <p className="text-gray-400 font-light text-sm">
+                Our relationship extends far beyond program completion
+              </p>
             </div>
             <div className="text-center">
-              <h3 className="text-lg font-medium text-white mb-4">Global Perspective</h3>
-              <p className="text-gray-400 font-light text-sm">Building companies that can compete and succeed on the world stage</p>
+              <h3 className="text-lg font-medium text-white mb-4">
+                Global Perspective
+              </h3>
+              <p className="text-gray-400 font-light text-sm">
+                Building companies that can compete and succeed on the world
+                stage
+              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-black border-t border-gray-800 py-20 px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-5 gap-12 mb-16">
-            {/* Company Info */}
-            <div className="md:col-span-2">
-              <h3 className="text-2xl font-light text-white mb-6">Nexus</h3>
-              <p className="text-gray-400 font-light leading-relaxed mb-8 max-w-md">
-                We partner with visionary founders to build companies that define tomorrow. 
-                Our specialized programs provide the resources, mentorship, and network needed 
-                to transform breakthrough ideas into industry-leading enterprises.
-              </p>
-              <div className="flex space-x-6">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <span className="sr-only">LinkedIn</span>
-                  <div className="w-6 h-6 bg-gray-400 hover:bg-white transition-colors"></div>
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <span className="sr-only">Twitter</span>
-                  <div className="w-6 h-6 bg-gray-400 hover:bg-white transition-colors"></div>
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  <span className="sr-only">Medium</span>
-                  <div className="w-6 h-6 bg-gray-400 hover:bg-white transition-colors"></div>
-                </a>
-              </div>
-            </div>
-
-            {/* Programs */}
-            <div>
-              <h4 className="text-white font-medium mb-6">Programs</h4>
-              <ul className="space-y-4 text-sm">
-                <li><a href="/startup-accelerator" className="text-gray-400 hover:text-white transition-colors">Startup Accelerator</a></li>
-                <li><a href="/tech-incubator" className="text-gray-400 hover:text-white transition-colors">Tech Incubator</a></li>
-                <li><a href="/scaleup-program" className="text-gray-400 hover:text-white transition-colors">Scale-up Program</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Application Process</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Program Calendar</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Success Stories</a></li>
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div>
-              <h4 className="text-white font-medium mb-6">Resources</h4>
-              <ul className="space-y-4 text-sm">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Portfolio</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Mentors</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Events</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Research</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Downloads</a></li>
-              </ul>
-            </div>
-
-            {/* Company */}
-            <div>
-              <h4 className="text-white font-medium mb-6">Company</h4>
-              <ul className="space-y-4 text-sm">
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Team</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Press</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Bottom Bar */}
-          <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-500 text-sm">
-              © 2025 Nexus Ventures. All rights reserved.
-            </p>
-            <div className="flex space-x-8 mt-4 md:mt-0">
-              <a href="#" className="text-gray-500 hover:text-gray-400 text-sm transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-500 hover:text-gray-400 text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-500 hover:text-gray-400 text-sm transition-colors">Cookie Policy</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
-  );
-};
+  )
+}
 
-export default Homepage;
+export default Homepage
