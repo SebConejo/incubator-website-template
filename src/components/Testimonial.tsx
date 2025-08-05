@@ -4,7 +4,7 @@ interface TestimonialProps {
   content: string
   author: string
   company: string
-  role: string
+  job: string
   image: { thumbnail: string | null; medium: string | null }
 }
 
@@ -13,7 +13,7 @@ const Testimonial: React.FC<TestimonialProps> = ({
   author,
   image,
   company,
-  role,
+  job,
 }) => {
   // Déterminer quelle image afficher
   const imageToShow = image.thumbnail || image.medium
@@ -23,19 +23,21 @@ const Testimonial: React.FC<TestimonialProps> = ({
       <blockquote className="text-lg font-light text-gray-200 leading-relaxed mb-8">
         "{content}"
       </blockquote>
-      <div>
+      <div className="flex items-center gap-4 mt-6">
         {imageToShow ? (
           <img
             src={imageToShow}
             alt={author}
-            className="w-10 h-10 rounded-full"
+            className="w-12 h-12 rounded-full object-cover"
           />
         ) : (
-          <div className="w-10 h-10 rounded-full bg-gray-500" /> // Placeholder si pas d'image
+          <div className="w-12 h-12 rounded-full bg-gray-500" /> // Placeholder si pas d'image
         )}
-        <div className="font-medium text-white mb-1">{author}</div>
-        <div className="text-sm text-gray-400">
-          {role}, {company}
+        <div>
+          <div className="font-medium text-white mb-1">{author}</div>
+          <div className="text-sm text-gray-400">
+            {job}, {company}
+          </div>
         </div>
       </div>
     </div>
