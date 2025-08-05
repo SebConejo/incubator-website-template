@@ -86,8 +86,15 @@ const Program = () => {
             <div className="relative">
               <div className="relative overflow-hidden rounded-2xl">
                 <img
-                  src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg"
-                  alt="Program team meeting"
+                  src={
+                    program?.image?.medium ||
+                    'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg'
+                  }
+                  alt={
+                    program?.name
+                      ? `${program.name} cover`
+                      : 'Program team meeting'
+                  }
                   className="w-full h-[600px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
