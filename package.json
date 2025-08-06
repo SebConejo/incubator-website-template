@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev-front": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
+    "dev": "concurrently \"npm run dev:front\" \"npm run manifest\""
   },
   "dependencies": {
     "concurrently": "^9.2.0",
