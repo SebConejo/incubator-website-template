@@ -10,10 +10,10 @@ const Navigation = () => {
   const location = useLocation()
 
   useEffect(() => {
-    fetch('http://localhost:1111/api/collections/programs?perPage=10')
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+    fetch(`${API_BASE_URL}/api/collections/programs?perPage=10`)
       .then((res) => res.json())
       .then((data) => {
-        // The API returns { data: Program[], ... }
         setPrograms(data.data || [])
       })
   }, [])

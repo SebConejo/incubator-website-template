@@ -34,10 +34,12 @@ const Program = () => {
 
   useEffect(() => {
     if (!slug) return
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
+
     fetch(
-      `http://localhost:1111/api/collections/programs?name_eq=${encodeURIComponent(
+      `${API_BASE_URL}/api/collections/programs?name_eq=${encodeURIComponent(
         slug
-      )}&relations=testimonials,callToAction`
+      )}&relations=testimonials,callToAction,startups`
     )
       .then((res) => res.json())
       .then((data) => setProgram(data.data?.[0] || null))
