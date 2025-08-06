@@ -109,49 +109,27 @@ const Program = () => {
         </div>
       </section>
 
-      {/* Portfolio Companies (static) */}
+      {/* Portfolio Companies (dynamic) */}
       <section className="py-20 px-6 lg:px-8 bg-gray-950">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-thin tracking-tight text-white mb-16 text-center">
             Scale-up Portfolio
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              LogiStream
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              FinanceFlow
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              EcoLogistics
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              GlobalTech
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              DataFlow
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              CloudScale
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              MarketOS
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              TradeTech
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              SupplyAI
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              RetailOS
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              HealthScale
-            </div>
-            <div className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm">
-              EduGlobal
-            </div>
+            {program?.startups && program.startups.length > 0 ? (
+              program.startups.map((startup, idx) => (
+                <div
+                  key={startup.id || idx}
+                  className="bg-black border border-gray-800 h-16 flex items-center justify-center text-white font-light text-sm"
+                >
+                  {startup.name}
+                </div>
+              ))
+            ) : (
+              <div className="col-span-full text-center text-gray-500 py-8">
+                No startups in this program yet.
+              </div>
+            )}
           </div>
         </div>
       </section>

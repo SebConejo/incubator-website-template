@@ -20,6 +20,12 @@ entities:
           type: group,
           options: { group: CallToAction, multiple: false },
         }
+      - {
+          name: startups,
+          helpText: 'display startups in the program',
+          type: group,
+          options: { group: Startup },
+        }
     policies:
       read:
         - access: public
@@ -39,3 +45,7 @@ groups:
       - { name: description, type: text }
       - { name: buttonAnchor, type: string, helpText: 'Anchor for the button' }
       - { name: buttonLink, type: link }
+
+  Startup:
+    properties:
+      - { name: name, type: string }
