@@ -21,7 +21,7 @@ npm run dev
 
 This starts the React app with Vite.
 
-#### Terminal 2 — Manifest Backend 
+### Terminal 2 — Manifest Backend 
 ```bash
 cd api
 npm i
