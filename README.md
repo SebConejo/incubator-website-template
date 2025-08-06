@@ -6,7 +6,6 @@ This project is a starter template using React with Vite for the frontend, and M
 ## 📦 Prerequisites
 
 - Node.js 18+
-- [Manifest](https://manifest.build) installed globally (`npm install -g manifest`)
 
 ## 🚀 Getting started
 
